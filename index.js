@@ -104,4 +104,4 @@ function calculateFinancialAnalysis(data) {
 for (let i=0; i <totalMonths; i++) {
   const currentAmount = data[i][1];
   totalProfitLoss += currentAmount
-  
+}
