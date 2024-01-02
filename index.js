@@ -104,4 +104,13 @@ function calculateFinancialAnalysis(data) {
 for (let i=0; i <totalMonths; i++) {
   const currentAmount = data[i][1];
   totalProfitLoss += currentAmount
+  if (i > 0) {
+    const change = currentAmount - date[i -1][1];
+    totalChange += change;
+  
+  if (change > greatestIncrease.amount) {
+    greatestDecrease.date = data[i][0];
+    greatestDecrease.amount = change;
+  }
+ }
 }
