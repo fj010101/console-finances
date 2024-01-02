@@ -126,4 +126,6 @@ console.log('Average Change: $' + averageChange.toFixed(2));
 console.log('Greatest Increase in Profits/Losses:' + greatestIncrease.date +' ($' + greatestIncrease.amount.toFiexed(2) + ')');
 console.log('Greatest Decrease in Profits/Losses: ' + greatestDecrease.date + ' ($' + greatestDecrease.amount.toFixed(2) + ')');
   }
-  
+
+  // Call the function with the new dataset
+  calculateFinancialAnalysis(finances);
