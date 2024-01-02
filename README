@@ -1,0 +1,39 @@
+# Financial Analysis Project
+
+## Overview
+This project is designed to analyse financial data represented as a dataset of monthly profits and losses. The primary goal is to provide insights into the overall financial performance over the given time period.
+
+## Dataset
+The financial data is stored in an array format, where each entry contains the month and the corresponding profit/loss amount.
+
+```javascript
+var finances = [
+  // ... (other data entries)
+  ['Feb-2017', 671099]
+];
+
+Financial Analysis Function
+
+The core functionality is encapsulated in the calculateFinancialAnalysis function. This function calculates various metrics such as total months, total profit/loss, average change, and identifies the months with the greatest increase and decrease in profits.
+
+function calculateFinancialAnalysis(data) {
+  // ... (calculation logic)
+}
+
+Usage
+
+To analyse the provided dataset, simply call the calculateFinancialAnalysis function with the financial data.
+
+calculateFinancialAnalysis(finances);
+
+Results
+
+The results of the analysis will be displayed in the console, providing insights into the financial performance, including the total months, total profit/loss, average change, and the months with the greatest increase and decrease in profits.
+
+Contributing
+
+Contributions to enhance the functionality, improve code quality, or address issues are welcome. Please follow the standard coding conventions and open a pull request for consideration.
+
+License
+
+This project is licensed under the MIT License.
