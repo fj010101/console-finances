@@ -6,6 +6,8 @@ This project is designed to analyse financial data represented as a dataset of m
 ## Dataset
 The financial data is stored in an array format, where each entry contains the month and the corresponding profit/loss amount.
 
+Live display [https://github.com/fj010101/console-finances/blob/main/Console.png]
+
 ```javascript
 var finances = [
   // ... (other data entries)
