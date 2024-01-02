@@ -98,34 +98,40 @@ function calculateFinancialAnalysis(data) {
   let totalMonths = data.length;
   let totalProfitLoss = 0;
   let totalChange = 0;
-  let greatestIncrease = {date: ", amount: 0 };
-  let greatestDecrease = { date: ", amount: 0 };
-
-for (let i=0; i <totalMonths; i++) {
-  const currentAmount = data[i][1];
-  totalProfitLoss += currentAmount
-  if (i > 0) {
-    const change = currentAmount - date[i -1][1];
-    totalChange += change;
+  let greatestIncrease = { date: '', amount: 0 };
+  let greatestDecrease = { date: '', amount: 0 };
   
-  if (change > greatestIncrease.amount) {
-    greatestDecrease.date = data[i][0];
-    greatestDecrease.amount = change;
+  for (let i = 0; i < totalMonths; i++) {
+    const currentAmount = data[i][1];
+    totalProfitLoss += currentAmount;
+  
+    if (i > 0) {
+      const change = currentAmount - data[i - 1][1];
+      totalChange += change;
+  
+      if (change > greatestIncrease.amount) {
+        greatestIncrease.date = data[i][0];
+        greatestIncrease.amount = change;
+      }
+  
+      if (change < greatestDecrease.amount) {
+        greatestDecrease.date = data[i][0];
+        greatestDecrease.amount = change;
+      }
+    }
   }
- }
-}
-
-const averageChange = totalChange / (totalMonths - 1);
-
-// Display the financial analysis
-console.log('Financial Analysis');
-console.log('-------------------')
-console.log('Total Months:' + totalMonths);
-console.log('Total: $' + totalProfitLoss);
-console.log('Average Change: $' + averageChange.toFixed(2));
-console.log('Greatest Increase in Profits/Losses:' + greatestIncrease.date +' ($' + greatestIncrease.amount.toFiexed(2) + ')');
-console.log('Greatest Decrease in Profits/Losses: ' + greatestDecrease.date + ' ($' + greatestDecrease.amount.toFixed(2) + ')');
-  }
+  
+  const averageChange = totalChange / (totalMonths - 1);
+  
+  // Display the financial analysis
+  console.log('Financial Analysis');
+  console.log('-------------------');
+  console.log('Total Months: ' + totalMonths);
+  console.log('Total: $' + totalProfitLoss);
+  console.log('Average Change: $' + averageChange.toFixed(2));
+  console.log('Greatest Increase in Profits/Losses: ' + greatestIncrease.date + ' ($' + greatestIncrease.amount.toFixed(2) + ')');
+  console.log('Greatest Decrease in Profits/Losses: ' + greatestDecrease.date + ' ($' + greatestDecrease.amount.toFixed(2) + ')');
+}  
 
   // Call the function with the new dataset
   calculateFinancialAnalysis(finances);
