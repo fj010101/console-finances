@@ -86,3 +86,22 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+// Given dataset
+var finances = [
+  ['Jan-2010', 867884],
+  // ... (other data entries)
+  ['Feb-2017', 671099]
+];
+
+// Function to calculate financial analysis
+function calculateFinancialAnalysis(data) {
+  let totalMonths = data.length;
+  let totalProfitLoss = 0;
+  let totalChange = 0;
+  let greatestIncrease = {date: ", amount: 0 };
+  let greatestDecrease = { date: ", amount: 0 };
+
+for (let i=0; i <totalMonths; i++) {
+  const currentAmount = data[i][1];
+  totalProfitLoss += currentAmount
+  
