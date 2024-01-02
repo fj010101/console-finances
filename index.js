@@ -114,3 +114,16 @@ for (let i=0; i <totalMonths; i++) {
   }
  }
 }
+
+const averageChange = totalChange / (totalMonths - 1);
+
+// Display the financial analysis
+console.log('Financial Analysis');
+console.log('-------------------')
+console.log('Total Months:' + totalMonths);
+console.log('Total: $' + totalProfitLoss);
+console.log('Average Change: $' + averageChange.toFixed(2));
+console.log('Greatest Increase in Profits/Losses:' + greatestIncrease.date +' ($' + greatestIncrease.amount.toFiexed(2) + ')');
+console.log('Greatest Decrease in Profits/Losses: ' + greatestDecrease.date + ' ($' + greatestDecrease.amount.toFixed(2) + ')');
+  }
+  
